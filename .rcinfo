@@ -1,4 +1,4 @@
 primary_repo: .
-primary_branch: main
+primary_branch: call-usage
 cache_addresses:
 - http://localhost:8080/cache

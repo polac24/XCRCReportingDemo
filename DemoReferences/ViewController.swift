@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         //
         
-        TypeInStaticLib().callFunction()
+        OtherType().callTypeInStaticLib()
     }
 
 

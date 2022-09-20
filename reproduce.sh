@@ -6,6 +6,7 @@ git fetch self
 
 git checkout -f
 rm -rf ~/Library/Caches/XCRemoteCache/localhost
+rm -rf /tmp/cache
 
 # Download XCRC
 XCRC_VERSION="${XCRC_VERSION:-0.3.17}"
