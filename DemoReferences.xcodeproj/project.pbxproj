@@ -176,9 +176,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 367D301328D96EFB003E1952 /* Build configuration list for PBXNativeTarget "DemoReferences" */;
 			buildPhases = (
-				4DF254E54A38AA158263A82B /* [RC] RemoteCache_prebuild */,
 				367D2FE528D96EF5003E1952 /* Sources */,
-				DFE6F7E67FBEB04C739DE775 /* [RC] RemoteCache_postbuild */,
 				367D2FE628D96EF5003E1952 /* Frameworks */,
 				367D2FE728D96EF5003E1952 /* Resources */,
 			);
@@ -196,9 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 367D301628D96EFB003E1952 /* Build configuration list for PBXNativeTarget "DemoReferencesTests" */;
 			buildPhases = (
-				4DF254E54A38AA158263A82B /* [RC] RemoteCache_prebuild */,
 				367D2FFB28D96EFB003E1952 /* Sources */,
-				DFE6F7E67FBEB04C739DE775 /* [RC] RemoteCache_postbuild */,
 				367D2FFC28D96EFB003E1952 /* Frameworks */,
 				367D2FFD28D96EFB003E1952 /* Resources */,
 			);
@@ -216,9 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 367D301928D96EFB003E1952 /* Build configuration list for PBXNativeTarget "DemoReferencesUITests" */;
 			buildPhases = (
-				4DF254E54A38AA158263A82B /* [RC] RemoteCache_prebuild */,
 				367D300528D96EFB003E1952 /* Sources */,
-				DFE6F7E67FBEB04C739DE775 /* [RC] RemoteCache_postbuild */,
 				367D300628D96EFB003E1952 /* Frameworks */,
 				367D300728D96EFB003E1952 /* Resources */,
 			);
@@ -236,9 +230,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 367D302628D974B5003E1952 /* Build configuration list for PBXNativeTarget "SomeStatLibrary" */;
 			buildPhases = (
-				4DF254E54A38AA158263A82B /* [RC] RemoteCache_prebuild */,
 				367D301C28D974B5003E1952 /* Sources */,
-				DFE6F7E67FBEB04C739DE775 /* [RC] RemoteCache_postbuild */,
 				367D301D28D974B5003E1952 /* Frameworks */,
 				367D301E28D974B5003E1952 /* CopyFiles */,
 			);
@@ -325,43 +317,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		4DF254E54A38AA158263A82B /* [RC] RemoteCache_prebuild */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			dependencyFile = "$(TARGET_TEMP_DIR)/prebuild.d";
-			files = (
-			);
-			inputPaths = (
-				/tmp/DemoReferences/XCRC/xcprebuild,
-			);
-			name = "[RC] RemoteCache_prebuild";
-			outputPaths = (
-				"$(TARGET_TEMP_DIR)/rc.enabled",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SCRIPT_INPUT_FILE_0\"";
-		};
-		DFE6F7E67FBEB04C739DE775 /* [RC] RemoteCache_postbuild */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			dependencyFile = "$(TARGET_TEMP_DIR)/postbuild.d";
-			files = (
-			);
-			inputPaths = (
-				/tmp/DemoReferences/XCRC/xcpostbuild,
-			);
-			name = "[RC] RemoteCache_postbuild";
-			outputPaths = (
-				"$(TARGET_BUILD_DIR)/$(MODULES_FOLDER_PATH)/$(PRODUCT_MODULE_NAME).swiftmodule/$(XCRC_PLATFORM_PREFERRED_ARCH).swiftmodule.md5",
-				"$(TARGET_BUILD_DIR)/$(MODULES_FOLDER_PATH)/$(PRODUCT_MODULE_NAME).swiftmodule/$(XCRC_PLATFORM_PREFERRED_ARCH)-$(LLVM_TARGET_TRIPLE_VENDOR)-$(SWIFT_PLATFORM_TARGET_PREFIX)$(LLVM_TARGET_TRIPLE_SUFFIX).swiftmodule.md5",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SCRIPT_INPUT_FILE_0\"";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		367D2FE528D96EF5003E1952 /* Sources */ = {
@@ -559,7 +514,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CC = /tmp/DemoReferences/XCRC/xccc;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -569,28 +523,17 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD = /tmp/DemoReferences/XCRC/xcld;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBTOOL = /tmp/DemoReferences/XCRC/xclibtool;
 				MARKETING_VERSION = 1.0;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-fdebug-prefix-map=/private/tmp/DemoReferences=$(XCRC_FAKE_SRCROOT)",
-				);
 				OTHER_LDFLAGS = "-lSomeStatLibrary";
-				OTHER_SWIFT_FLAGS = "$(inherited) -debug-prefix-map /private/tmp/DemoReferences=$(XCRC_FAKE_SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.polaczyk.DemoReferences;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_EXEC = /tmp/DemoReferences/XCRC/xcswiftc;
-				SWIFT_USE_INTEGRATED_DRIVER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				XCRC_FAKE_SRCROOT = /xxxxxxxxxx;
-				XCRC_PLATFORM_PREFERRED_ARCH = "$(LINK_FILE_LIST_$(CURRENT_VARIANT)_$(PLATFORM_PREFERRED_ARCH):dir:standardizepath:file:default=arm64)";
 			};
 			name = Debug;
 		};
@@ -627,29 +570,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CC = /tmp/DemoReferences/XCRC/xccc;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD = /tmp/DemoReferences/XCRC/xcld;
-				LIBTOOL = /tmp/DemoReferences/XCRC/xclibtool;
 				MARKETING_VERSION = 1.0;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-fdebug-prefix-map=/private/tmp/DemoReferences=$(XCRC_FAKE_SRCROOT)",
-				);
-				OTHER_SWIFT_FLAGS = "$(inherited) -debug-prefix-map /private/tmp/DemoReferences=$(XCRC_FAKE_SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.polaczyk.DemoReferencesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_EXEC = /tmp/DemoReferences/XCRC/xcswiftc;
-				SWIFT_USE_INTEGRATED_DRIVER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoReferences.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DemoReferences";
-				XCRC_FAKE_SRCROOT = /xxxxxxxxxx;
-				XCRC_PLATFORM_PREFERRED_ARCH = "$(LINK_FILE_LIST_$(CURRENT_VARIANT)_$(PLATFORM_PREFERRED_ARCH):dir:standardizepath:file:default=arm64)";
 			};
 			name = Debug;
 		};
@@ -676,28 +607,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CC = /tmp/DemoReferences/XCRC/xccc;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				LD = /tmp/DemoReferences/XCRC/xcld;
-				LIBTOOL = /tmp/DemoReferences/XCRC/xclibtool;
 				MARKETING_VERSION = 1.0;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-fdebug-prefix-map=/private/tmp/DemoReferences=$(XCRC_FAKE_SRCROOT)",
-				);
-				OTHER_SWIFT_FLAGS = "$(inherited) -debug-prefix-map /private/tmp/DemoReferences=$(XCRC_FAKE_SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.polaczyk.DemoReferencesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_EXEC = /tmp/DemoReferences/XCRC/xcswiftc;
-				SWIFT_USE_INTEGRATED_DRIVER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = DemoReferences;
-				XCRC_FAKE_SRCROOT = /xxxxxxxxxx;
-				XCRC_PLATFORM_PREFERRED_ARCH = "$(LINK_FILE_LIST_$(CURRENT_VARIANT)_$(PLATFORM_PREFERRED_ARCH):dir:standardizepath:file:default=arm64)";
 			};
 			name = Debug;
 		};
@@ -721,24 +640,12 @@
 		367D302428D974B5003E1952 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CC = /tmp/DemoReferences/XCRC/xccc;
 				CODE_SIGN_STYLE = Automatic;
-				LD = /tmp/DemoReferences/XCRC/xcld;
-				LIBTOOL = /tmp/DemoReferences/XCRC/xclibtool;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-fdebug-prefix-map=/private/tmp/DemoReferences=$(XCRC_FAKE_SRCROOT)",
-				);
 				OTHER_LDFLAGS = "-ObjC";
-				OTHER_SWIFT_FLAGS = "$(inherited) -debug-prefix-map /private/tmp/DemoReferences=$(XCRC_FAKE_SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_EXEC = /tmp/DemoReferences/XCRC/xcswiftc;
-				SWIFT_USE_INTEGRATED_DRIVER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				XCRC_FAKE_SRCROOT = /xxxxxxxxxx;
-				XCRC_PLATFORM_PREFERRED_ARCH = "$(LINK_FILE_LIST_$(CURRENT_VARIANT)_$(PLATFORM_PREFERRED_ARCH):dir:standardizepath:file:default=arm64)";
 			};
 			name = Debug;
 		};
